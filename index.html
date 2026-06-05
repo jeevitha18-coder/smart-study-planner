@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>📚 Smart Study Planner</h2>
+
+    <button id="darkModeBtn" onclick="toggleDarkMode()">
+        🌙 Dark Mode
+    </button>
+</header>
+
+<div class="container">
+
+    <h1>Smart Study Planner</h1>
+    <p>Plan Smarter. Score Better.</p>
+
+    <div class="profile-box">
+
+        <input
+            type="text"
+            id="userName"
+            placeholder="Enter Your Name">
+
+        <button onclick="saveUserName()">
+            Save Name
+        </button>
+
+        <h3 id="welcomeText">
+            Welcome Student 👋
+        </h3>
+
+    </div>
+    <div class="streak-box">
+    <h3 id="streakText">
+        🔥 Study Streak: 0 Days
+    </h3>
+    </div>
+    <div class="dashboard">
+
+        <div class="card">
+            <h3 id="totalSubjects">0</h3>
+            <p>Total Subjects</p>
+        </div>
+
+        <div class="card">
+            <h3 id="upcomingExams">0</h3>
+            <p>Upcoming Exams</p>
+        </div>
+
+    </div>
+
+    <input
+        type="text"
+        id="subject"
+        placeholder="Enter Subject Name">
+
+    <input
+        type="date"
+        id="examDate">
+
+    <button onclick="addSubject()">
+        Add Subject
+    </button>
+
+    <br><br>
+
+    <button onclick="generateTimetable()">
+        Generate Timetable
+    </button>
+
+    <h2>Today's Study Plan</h2>
+
+    <div id="timetable"></div>
+
+    <h2>Progress</h2>
+
+    <div class="progress-container">
+        <div id="progressBar"></div>
+    </div>
+
+    <p id="progressText">0% Completed</p>
+
+    <h2>Subjects</h2>
+
+    <div id="subjectList"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
